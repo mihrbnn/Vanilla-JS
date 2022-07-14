@@ -1,3 +1,5 @@
+const helpText = document.querySelector(".help")
+const helpButton = document.querySelector(".helpButton")
 const pressed = []
 const secretCode = "sisyphos"
 window.addEventListener("keyup",(e)=>{
@@ -5,8 +7,15 @@ window.addEventListener("keyup",(e)=>{
     pressed.push(e.key)
     pressed.splice(-secretCode.length-1,pressed.length-secretCode.length)
     if(pressed.join("").includes(secretCode)){
-        console.log("Yeyy")
         cornify_add();
     }
     console.log(pressed)
+    console.log(button)
+
 })
+
+function help(e){
+   helpText.innerHTML = "Okay, don't worry. Just type <strong>sisyphos</strong>"
+}
+
+helpButton.addEventListener("click",help)
