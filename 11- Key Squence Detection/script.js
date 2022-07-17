@@ -1,7 +1,7 @@
 const helpText = document.querySelector(".help")
 const helpButton = document.querySelector(".helpButton")
 const pressed = []
-const secretCode = "sisyphos"
+const secretCode = "sisifos"
 window.addEventListener("keyup",(e)=>{
     console.log(e.key)
     pressed.push(e.key)
@@ -15,7 +15,7 @@ window.addEventListener("keyup",(e)=>{
 })
 
 function help(e){
-   helpText.innerHTML = "Okay, don't worry. Just type <strong>sisyphos</strong>"
+   helpText.innerHTML = "Okay, don't worry. Just type <strong>sisifos</strong>"
 }
 
 helpButton.addEventListener("click",help)
